@@ -3,7 +3,7 @@ import React from 'react';
 const BookImageCards = () => {
 	return (
 	 	<div style={styles.container}>
-		    <h2> fix tfds Cookbooks  </h2>
+		    <h2> Read These Cookbooks  </h2>
 		    <div style = {styles.cardcontainer}>
 		       <img style={styles.imgbook} src="https://books.google.com/books/content/images/frontcover/IGSwLLETenMC?fife=w200-h300" alt="Gordon Ramsay" />
 		       <img style={styles.imgbook} src="https://books.google.com/books/content/images/frontcover/h1z5lgji7GMC?fife=w200-h300" alt="Gordon Ramsay" />
