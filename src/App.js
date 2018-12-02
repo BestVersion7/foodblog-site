@@ -1,28 +1,12 @@
-import React from 'react';
-import {HashRouter as Router, Switch, Route} from 'react-router-dom';
+import React, {useState} from 'react';
 
-import HomePage from './routes/HomePage';
-import RecipePage from './routes/RecipePage';
-import ContactPage from './routes/ContactPage';
-import ErrorPage from './routes/ErrorPage';
-import TestingPage	from './routes/TestingPage';
+const App = () => {
 
-class App extends React.Component {
-	render() {
-		return (
-			<Router>
-				<>
-				<Switch>
-					<Route path='/' exact component = {HomePage} />
-					<Route path='/recipes' component = {RecipePage} />
-					<Route path='/contact' component = {ContactPage} />
-					<Route path='/testing' component = {TestingPage} />
-					<Route component = {ErrorPage} />
-				</Switch>
-				</>
-			</Router>
-		);
-	}
+	return (
+		<div>
+			hello
+		</div>
+	)
 }
 
 export default App;
