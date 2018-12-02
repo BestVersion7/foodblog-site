@@ -1,35 +1,47 @@
 import React from 'react';
 
+const images = {
+	applepie: require('../assets/applepie.jpg'),
+	fishandchips: require('../assets/fishandchips.jpg'),
+	kobebeef: require('../assets/kobebeef.jpeg')
+}
+
 const RecipeImageCards = () => {
 	return (
-			<div style = {styles.container}>
+	  <div style = {styles.container}>
+		  <h2> Main Courses </h2>
+			<div style ={styles.cardcontainer}>
 			  <div style={styles.border}>
-		        <img style = {styles.img} src="https://previews.123rf.com/images/greenartphotography/greenartphotography1510/greenartphotography151000056/47426754-homemade-gourmet-apple-pie-baked-sweet-traditional-dessert-with-cinnamon-and-apples-on-vintage-backg.jpg" alt="random pic" />
+		    	<img style = {styles.img} src={images.applepie} alt="pie" />
 		        <p> Gourmet Apple Pie <br />
 		        <a href="https://www.google.com/"> Click for recipe </a>
 				 		</p>
-				 </div>
-				 <div style = {styles.border}>
-						<img style = {styles.img} src="http://www.kobeclassicbeef.com/wp-content/uploads/2012/08/image.jpeg" alt="random pic" />
-		          <p> Exquisite Kobe Beef <br />
-		          <a href="https://www.google.com"> Click for recipe </a>
-							</p>
 				</div>
-				<div style = {styles.border}>
-					  <img style = {styles.img} src="http://foodnessgracious.com/wp-content/uploads/2016/10/beer-battered-tilapia-04.jpg" alt="random pic" />
-		          <p> Classic fish n' chips <br />
-		          <a href="https://www.google.com/"> Click for recipe </a>
-							</p>
+			  <div style = {styles.border}>
+					<img style = {styles.img} src={images.kobebeef} alt="beef" />
+	          <p> Exquisite Kobe Beef <br />
+	          <a href="https://www.google.com"> Click for recipe </a>
+						</p>
 				</div>
-			</div>
-    )
+		  	<div style = {styles.border}>
+				  <img style = {styles.img} src={images.fishandchips} alt="beef" />
+	          <p> Classic fish n' chips <br />
+	          <a href="https://www.google.com/"> Click for recipe </a>
+						</p>
+			  </div>
+		  </div>
+    </div>
+  )
 }
 
 const styles = {
 	container: {
+		margin: '0 1.5%'
+	},
+
+	cardcontainer: {
 		display: "grid",
 		gridTemplate: '1fr 30px/ 1fr 1fr 1fr',
-		margin: '0 1.5%',
 		gridGap: '3%'
 	},
 

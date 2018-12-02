@@ -1,16 +1,24 @@
 import React from 'react';
 
+const images = {
+	bountiful: require('../assets/bountiful.jpg'),
+	italian: require('../assets/italian.jpg'),
+	lappetito: require('../assets/lappetito.jpg'),
+	loverealfood: require('../assets/loverealfood.jpg')
+}
+
 const BookImageCards = () => {
 	return (
 	 	<div style={styles.container}>
-		    <h2> Develop Your Cooking Technique!  </h2>
+		    <h2> Develop Your Cooking Technique!</h2>
 		    <div style = {styles.cardcontainer}>
-		       <img style={styles.imgbook} src="https://books.google.com/books/content/images/frontcover/IGSwLLETenMC?fife=w200-h300" alt="Gordon Ramsay" />
-		       <img style={styles.imgbook} src="https://books.google.com/books/content/images/frontcover/h1z5lgji7GMC?fife=w200-h300" alt="Gordon Ramsay" />
-		       <img style={styles.imgbook} src="https://books.google.com/books/content/images/frontcover/5qJKDwAAQBAJ?fife=w200-h300" alt="Gordon Ramsay" />
-		       <img style={styles.imgbook} src="https://images-na.ssl-images-amazon.com/images/I/51l3mBqNdYL._SX258_BO1,204,203,200_.jpg" alt="graham" />
-		      <a style = {{marginTop:'10%'}} href="https://google.com"> See More > </a>
+		       <img style={styles.imgbook} src = {images.bountiful} alt="bountiful" />
+		       <img style={styles.imgbook} src= {images.italian} alt="italian" />
+		       <img style={styles.imgbook} src = {images.lappetito} alt = "lappetito"  />
+		       <img style={styles.imgbook} src = {images.loverealfood} alt="loverealfood"/>
+		      <a style = {{marginTop:'10%'}} href="https://google.com"> See More> </a>
 			  </div>
+				<br />
 		</div>
 	)
 }
