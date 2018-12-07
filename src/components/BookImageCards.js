@@ -16,7 +16,6 @@ const BookImageCards = () => {
 		       <img style={styles.imgbook} src= {images.italian} alt="italian" />
 		       <img style={styles.imgbook} src = {images.lappetito} alt = "lappetito"  />
 		       <img style={styles.imgbook} src = {images.loverealfood} alt="loverealfood"/>
-		      <a style = {{marginTop:'50%'}} href="https://google.com"> See More> </a>
 			  </div>
 				<br />
 		</div>
@@ -25,19 +24,18 @@ const BookImageCards = () => {
 
 const styles = {
 	container: {
-		margin: '0 1.5%'
+		margin: '0 2.5%'
 	},
 
 	cardcontainer: {
 		display:'grid',
-		gridTemplate: '300px/220px 220px 220px 220px 1fr',
+		gridTemplate: '15em /1fr 1fr 1fr 1fr',
     overflow: 'auto',
-		gridGap: '1.5%'
+		gridColumnGap: '5%'
 	},
 
 	imgbook: {
-		height: '300px',
-		width: '200px',
+		height: '100%',
 		objectFit:'cover'
 	}
 }

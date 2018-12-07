@@ -16,100 +16,80 @@ const images = {
 const RecipeImageCards = () => {
 	return (
 	  <div style = {styles.container}>
+			<p> Learn recipes that will benefit you forever!!! In this website, I have highlighted many recipes that I have perfected from experimenting in the kitchen for over 20+ years! Go ask your loved ones/ family/ friends to help because this is not a one-person job!</p>
+			<p> Click below to get started! </p>
 		  <h2> Starters </h2>
 			<div style ={styles.cardcontainer}>
-			  <div style={styles.border}>
-		    	<img style = {styles.img} src={images.applepie} alt="pie" />
-		        <p> Gourmet Apple Pie <br />
-		        <a href="https://www.google.com/"> Click for recipe </a>
-				 		</p>
-				</div>
-			  <div style = {styles.border}>
-					<img style = {styles.img} src={images.kobebeef} alt="beef" />
-	          <p> Exquisite Kobe Beef <br />
-	          <a href="https://www.google.com"> Click for recipe </a>
-						</p>
-				</div>
-		  	<div style = {styles.border}>
-				  <img style = {styles.img} src={images.fishandchips} alt="beef" />
-	          <p> Classic fish n' chips <br />
-	          <a href="https://www.google.com/"> Click for recipe </a>
-						</p>
-			  </div>
-		  </div>
+				<img style = {styles.img} src={images.shrimp} alt="shrimp" />
+				<img style = {styles.img} src={images.mussels} alt="mussels" />
+				<img style = {styles.img} src={images.kingcrab} alt="kingcrab" />
+
+				<p> Garlic Shrimp <br />
+				<a href="https://www.google.com/"> Click for recipe </a>
+				</p>
+        <p> Savoury Mussels <br />
+        <a href="https://www.google.com"> Click for recipe </a>
+				</p>
+				<p> Tasty Crab Legs <br />
+        <a href="https://www.google.com"> Click for recipe </a>
+				</p>
+			</div>
 
 			<h2> Main Courses </h2>
 			<div style ={styles.cardcontainer}>
-			  <div style={styles.border}>
-		    	<img style = {styles.img} src={images.applepie} alt="pie" />
-		        <p> Gourmet Apple Pie <br />
-		        <a href="https://www.google.com/"> Click for recipe </a>
-				 		</p>
-				</div>
-			  <div style = {styles.border}>
-					<img style = {styles.img} src={images.kobebeef} alt="beef" />
-	          <p> Exquisite Kobe Beef <br />
-	          <a href="https://www.google.com"> Click for recipe </a>
-						</p>
-				</div>
-		  	<div style = {styles.border}>
-				  <img style = {styles.img} src={images.fishandchips} alt="beef" />
-	          <p> Classic fish n' chips <br />
-	          <a href="https://www.google.com/"> Click for recipe </a>
-						</p>
-			  </div>
-		  </div>
+				<img style = {styles.img} src={images.salmon} alt="salmon" />
+				<img style = {styles.img} src={images.kobebeef} alt="beef" />
+				<img style = {styles.img} src={images.fishandchips} alt="fish" />
+
+				<p> Fresh Salmon <br />
+				<a href="https://www.google.com/"> Click for recipe </a>
+				</p>
+        <p> Exquisite Kobe Beef <br />
+        <a href="https://www.google.com"> Click for recipe </a>
+				</p>
+				<p> Classic fish n' chips <br />
+        <a href="https://www.google.com"> Click for recipe </a>
+				</p>
+			</div>
 
 			<h2> Desserts </h2>
 			<div style ={styles.cardcontainer}>
-			  <div style={styles.border}>
-		    	<img style = {styles.img} src={images.applepie} alt="pie" />
-		        <p> Gourmet Apple Pie <br />
-		        <a href="https://www.google.com/"> Click for recipe </a>
-				 		</p>
-				</div>
-			  <div style = {styles.border}>
-					<img style = {styles.img} src={images.cheesecake} alt="cheesecake" />
-	          <p> Assorted Cheesecake <br />
-	          <a href="https://www.google.com"> Click for recipe </a>
-						</p>
-				</div>
-		  	<div style = {styles.border}>
-				  <img style = {styles.img} src={images.fishandchips} alt="beef" />
-	          <p> Classic fish n' chips <br />
-	          <a href="https://www.google.com/"> Click for recipe </a>
-						</p>
-			  </div>
-		  </div>
+				<img style = {styles.img} src={images.applepie} alt="pie" />
+				<img style = {styles.img} src={images.souffle} alt="souffle" />
+				<img style = {styles.img} src={images.cheesecake} alt="cheesecake" />
 
-    </div>
+				<p> Gourmet Apple Pie <br />
+				<a href="https://www.google.com/"> Click for recipe </a>
+				</p>
+        <p> Cheese Souffle <br />
+        <a href="https://www.google.com"> Click for recipe </a>
+				</p>
+				<p> Assorted Cheesecake <br />
+        <a href="https://www.google.com"> Click for recipe </a>
+				</p>
+			</div>
+		</div>
+
   )
 }
 
 const styles = {
 	container: {
-		margin: '0 1.5%'
+		margin: '0 2.5%'
 	},
 
 	cardcontainer: {
-		display: "grid",
-		gridTemplate: '1fr 30px/ 1fr 1fr 1fr',
-		gridGap: '3%'
+		display: 'grid',
+		gridTemplate: '1fr auto/ 1fr 1fr 1fr',
+		gridColumnGap: '5%',
+		textAlign: 'center'
 	},
 
 	img: {
 		width: '100%',
-		height: '15em',
-		objectFit: 'cover',
-		borderTopLeftRadius: '3em',
-		borderTopRightRadius: '3em'
-	},
-
-	border: {
-		border: '0.8px solid black',
+		border: '.1em solid black',
 		borderRadius: '3em',
-		textAlign: 'center'
-	}
+	},
 }
 
 export default RecipeImageCards;

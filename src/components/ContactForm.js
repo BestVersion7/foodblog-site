@@ -22,7 +22,7 @@ const ContactForm = () => {
 
 const styles = {
 	container: {
-		margin: '0 1.5%'
+		margin: '0 2.5%'
 	}
 }
 
