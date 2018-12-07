@@ -23,14 +23,14 @@ const styles = {
     color: 'white',
     fontSize: '1.5em',
     textDecoration: 'none',
-    padding: '0 1em 0 1em'
+    padding: '0 1em'
   },
   activelink: {
     color: 'white',
     background: 'black'
   },
   navbar: {
-    background: 'green',
+    background: 'green'
   }
 }
 

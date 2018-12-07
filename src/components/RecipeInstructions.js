@@ -1,7 +1,12 @@
 import React from 'react';
 
-const RecipeInstructions = () => {
+const images = {
+	applepie: require('../assets/applepie.jpg'),
+	fishandchips: require('../assets/fishandchips.jpg'),
+	kobebeef: require('../assets/kobebeef.jpeg')
+}
 
+const RecipeInstructions = () => {
   const ingredients = [
     "flour",
     "sugar",
@@ -33,7 +38,7 @@ const RecipeInstructions = () => {
   return (
     <div style = {styles.container}>
       <h2> Gourmet Apple Pie </h2>
-      <img className="rounded img-fluid" width="300" src="https://previews.123rf.com/images/greenartphotography/greenartphotography1510/greenartphotography151000056/47426754-homemade-gourmet-apple-pie-baked-sweet-traditional-dessert-with-cinnamon-and-apples-on-vintage-backg.jpg" alt="random pic" />
+      <img className="rounded img-fluid" width="300" src={images.applepie} alt="random pic" />
       <p> Time: 5hr <br /> Servings: 5-10 people </p>
       <div style = {styles.instructioncontainer}>
         <div>
@@ -56,7 +61,7 @@ const styles = {
 
   instructioncontainer: {
     display:'grid',
-    gridTemplate: '1fr/ 1fr 2fr'
+    gridTemplate: '1fr/ 200px 1fr'
   },
   paragraph: {
     fontSize: '1.5em',

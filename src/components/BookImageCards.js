@@ -16,7 +16,7 @@ const BookImageCards = () => {
 		       <img style={styles.imgbook} src= {images.italian} alt="italian" />
 		       <img style={styles.imgbook} src = {images.lappetito} alt = "lappetito"  />
 		       <img style={styles.imgbook} src = {images.loverealfood} alt="loverealfood"/>
-		      <a style = {{marginTop:'10%'}} href="https://google.com"> See More> </a>
+		      <a style = {{marginTop:'50%'}} href="https://google.com"> See More> </a>
 			  </div>
 				<br />
 		</div>
