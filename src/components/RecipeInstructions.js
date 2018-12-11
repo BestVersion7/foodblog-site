@@ -41,15 +41,16 @@ const RecipeInstructions = () => {
       <img className="rounded img-fluid" width="300" src={images.applepie} alt="random pic" />
       <p> Time: 5hr <br /> Servings: 5-10 people </p>
       <div style = {styles.instructioncontainer}>
-        <div>
-    			<h2> Ingredients </h2>
+        <div style = {styles.border}>
+    			<h3> Ingredients </h3>
           <ul>{ingredientlist}</ul>
     		</div>
-        <div>
-    			<h2> Instructions </h2>
+        <div style = {styles.border}>
+    			<h3> Instructions </h3>
           <ol style={styles.paragraph}>{instructionlist}</ol>
         </div>
       </div>
+			<br />
     </div>
   )
 }
@@ -61,13 +62,16 @@ const styles = {
 
   instructioncontainer: {
     display:'grid',
-    gridTemplate: '1fr/ 200px 1fr'
+    gridTemplate: 'auto/ auto auto 1fr',
+		gridColumnGap: '1%'
   },
   paragraph: {
     fontSize: '1.5em',
     color: 'red',
-    border: '1px solid black'
-  }
+  },
+	border: {
+		border: '.2em solid gray'
+	}
 }
 
 export default RecipeInstructions;

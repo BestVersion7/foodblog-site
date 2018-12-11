@@ -1,26 +1,36 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const TestHooks = () => {
 
-	const [val,setVal] = useState (0);
+	console.log('first');
+	const x = () => {
+		console.log('third')
+	};
+	console.log('second');
+
+	setTimeout(x,2000);
+
+	const prom = new Promise((resolve, reject) => {
+	  resolve('Yay!');
+	});
+
+	const handleSuccess = (resolvedValue) => {
+	  console.log(resolvedValue);
+	};
+
+	prom.then(handleSuccess);
+
 
 	return (
-		<div style = {styles.container}>
-			<p> {val} </p>
-			<button onClick = {() => setVal(val+1)}>
-			Increase
-			</button>
-
-			<button onClick = {() => setVal(val-1)}>
-			Decrease
-			</button>
+		<div>
+		hdy
 		</div>
 	)
-}
+};
 
 const styles = {
 	container: {
-		margin: '0 1.5%'
+		margin: '0 2.5%'
 	}
 }
 

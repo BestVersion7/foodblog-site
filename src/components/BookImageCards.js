@@ -29,9 +29,9 @@ const styles = {
 
 	cardcontainer: {
 		display:'grid',
-		gridTemplate: '15em /1fr 1fr 1fr 1fr',
+		gridTemplate: '15em / auto auto auto auto 1fr',
     overflow: 'auto',
-		gridColumnGap: '5%'
+		gridColumnGap: '2%'
 	},
 
 	imgbook: {

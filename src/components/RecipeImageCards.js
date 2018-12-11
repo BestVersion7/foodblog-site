@@ -61,7 +61,7 @@ const RecipeImageCards = () => {
 				<p> Gourmet Apple Pie <br />
 				<a href="https://www.google.com/"> Click for recipe </a>
 				</p>
-        <p> Cheese Souffle <br />
+        <p> Chocolate Souffle <br />
         <a href="https://www.google.com"> Click for recipe </a>
 				</p>
 				<p> Assorted Cheesecake <br />

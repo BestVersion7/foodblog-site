@@ -12,7 +12,7 @@ const ContactForm = () => {
 		        <label> Email </label> <br />
 		        <input type="email" id="email" required/> <br />
 		        <label> Recipe </label> <br />
-		        <input type="text" id="recipe" /> <br />
+		        <input type="text" id="recipe" style = {styles.recipebox}/> <br />
 						<input type="submit" value="Send Message"  />
 		    </div>
 		  <h2 className="bg-info">  To be continued... </h2>
@@ -23,6 +23,9 @@ const ContactForm = () => {
 const styles = {
 	container: {
 		margin: '0 2.5%'
+	},
+	recipebox: {
+		height: '10em'
 	}
 }
 
