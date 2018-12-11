@@ -7,21 +7,24 @@ const PageNavigation = () => {
   return (
     <>
       <PageHeader />
-      <div style = {styles.navbar}>
-      <NavLink style = {styles.link} activeStyle = {styles.activelink} to="/" exact>Home</NavLink>
-      <NavLink style = {styles.link} activeStyle = {styles.activelink} to='/recipes'> Recipes</NavLink>
-      <NavLink style = {styles.link} activeStyle = {styles.activelink} to='/contact'> Contact</NavLink>
-      <NavLink style = {styles.link} activeStyle = {styles.activelink} to='/testing'> Testing</NavLink>
-      </div>
+      <nav style={styles.green} className="navbar-nav navbar-expand">
+        <NavLink style = {styles.link} activeStyle = {styles.activelink} to="/" exact>Home</NavLink>
+        <NavLink style = {styles.link} activeStyle = {styles.activelink} to='/recipes'> Recipes</NavLink>
+        <NavLink style = {styles.link} activeStyle = {styles.activelink} to='/contact'> Contact</NavLink>
+        {/*<NavLink style = {styles.link} activeStyle = {styles.activelink} to='/testing'> Testing</NavLink>*/}
+      </nav>
       <br />
     </>
   )
 }
 
 const styles = {
+  green: {
+    background: 'green'
+  },
   link: {
     color: 'white',
-    fontSize: '1.5em',
+    fontSize: '1.2em',
     textDecoration: 'none',
     padding: '0 1em'
   },

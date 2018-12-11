@@ -1,12 +1,11 @@
 import React from 'react';
+import Logo from '../assets/headerbackground.jpg';
 
 const PageHeader = () => {
 	return (
-		<>
-			<div style = {styles.container}>
-				<button style={styles.headerTitle}> Gourmet Meals </button>
-			</div>
-		</>
+		<div style = {styles.container}>
+			<button style={styles.headerTitle}> Gourmet Meals </button>
+		</div>
 	)
 }
 
@@ -20,7 +19,7 @@ const styles = {
 	},
 
 	container: {
-		background: "url(http://headerart.weebly.com/uploads/5/7/5/7/5757212/4697981_orig.jpg)",
+		background: `url(${Logo})`,
 		height: '3em',
 		opacity: '0.8'
 	}

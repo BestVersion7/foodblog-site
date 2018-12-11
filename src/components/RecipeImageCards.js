@@ -82,13 +82,14 @@ const styles = {
 		display: 'grid',
 		gridTemplate: '1fr auto/ 1fr 1fr 1fr',
 		gridColumnGap: '5%',
-		textAlign: 'center'
-	},
+		justifyItems: 'center'
+		},
 
 	img: {
 		width: '100%',
 		border: '.1em solid black',
 		borderRadius: '3em',
+		maxWidth: '17em',
 	},
 }
 
