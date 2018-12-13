@@ -16,7 +16,7 @@ const BookImageCards = () => {
 		       <img style={styles.imgbook} src= {images.italian} alt="italian" />
 		       <img style={styles.imgbook} src = {images.lappetito} alt = "lappetito"  />
 		       <img style={styles.imgbook} src = {images.loverealfood} alt="loverealfood"/>
-					 <a style = {{marginTop:'10%'}} href="https://google.com"> more -> (beta) </a>
+					 <a style = {{marginTop:'50%'}} href="https://google.com">More </a>
 			  </div>
 				<br />
 		</div>
@@ -32,7 +32,7 @@ const styles = {
 		display:'grid',
 		gridTemplate: '15em / auto auto auto auto 1fr',
     overflow: 'auto',
-		gridColumnGap: '2%'
+		gridColumnGap: '5%'
 	},
 
 	imgbook: {

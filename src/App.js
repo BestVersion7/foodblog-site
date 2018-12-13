@@ -4,7 +4,7 @@ import HomePage from './routes/HomePage';
 import RecipePage from './routes/RecipePage';
 import ContactPage from './routes/ContactPage';
 import ErrorPage from './routes/ErrorPage';
-//import TestingPage from './routes/TestingPage';
+import TestingPage from './routes/TestingPage';
 
 class App extends React.Component {
 	render() {
@@ -15,7 +15,7 @@ class App extends React.Component {
 					<Route path='/' exact component = {HomePage} />
 					<Route path='/recipes' component = {RecipePage} />
 					<Route path='/contact' component = {ContactPage} />
-					{/*<Route path='/testing' component = {TestingPage} />*/}
+					<Route path='/testing' component = {TestingPage} />
 					<Route component = {ErrorPage} />
 				</Switch>
 				</>

@@ -11,7 +11,7 @@ const PageNavigation = () => {
         <NavLink style = {styles.link} activeStyle = {styles.activelink} to="/" exact>Home</NavLink>
         <NavLink style = {styles.link} activeStyle = {styles.activelink} to='/recipes'> Recipes</NavLink>
         <NavLink style = {styles.link} activeStyle = {styles.activelink} to='/contact'> Contact</NavLink>
-        {/*<NavLink style = {styles.link} activeStyle = {styles.activelink} to='/testing'> Testing</NavLink>*/}
+        <NavLink style = {styles.link} activeStyle = {styles.activelink} to='/testing'> Testing</NavLink>
       </nav>
       <br />
     </>

@@ -1,15 +1,15 @@
 import React from 'react';
 import PageNavigation from '../components/PageNavigation';
-//import TestHooks from '../components/TestingHooks';
+import TestHooks from '../components/TestHooks';
 
 
 const TestingPage = () => {
   return (
     <div>
-      {/*<TestHooks />*/}
       <PageNavigation />
+      <TestHooks />
     </div>
   )
 }
 
-//export default TestingPage;
+export default TestingPage;

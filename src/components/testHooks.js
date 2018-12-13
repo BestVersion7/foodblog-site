@@ -1,35 +1,42 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
-const TestHooks = () => {
+export const TestHooks = () => {
 
-	console.log('first');
-	const x = () => {
-		console.log('third')
-	};
-	console.log('second');
+	const [val,setVal] = useState (0);
+  const [name, setName] = useState('Jago');
 
-	setTimeout(x,2000);
+  useEffect( () => {
 
-	const prom = new Promise((resolve, reject) => {
-	  resolve('Yay!');
-	});
+  });
 
-	const handleSuccess = (resolvedValue) => {
-	  console.log(resolvedValue);
-	};
-
-	prom.then(handleSuccess);
-
+  const Increment1 = () => {
+    setVal(val+1)
+  };
+  const Decrement1 = () => {
+    setVal(val-1)
+  };
+  const handleNameChange = e => {
+    setName(e.target.value)
+  }
 
 	return (
-		<div>
-		hdy
+		<div style = {styles.container}>
+			<p> {name} </p>
+			<button onClick = {Increment1}>Increase</button>
+			<button onClick = {Decrement1}>Decrease</button>
+      <br /> <br />
+      <input
+        value = {name}
+        onChange = {handleNameChange}
+      />
 		</div>
 	)
-};
+}
 
 const styles = {
 	container: {
 		margin: '0 2.5%'
 	}
 }
+
+export default TestHooks;
