@@ -1,19 +1,15 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 
-import PageHeader from './PageHeader';
-
-const PageNavigation = () => {
+export default() => {
   return (
     <>
-      <PageHeader />
-      <nav style={styles.green} className="navbar-nav navbar-expand">
+      <nav style = {{display:'block'}} className = "navbar navbar-expand">
         <NavLink style = {styles.link} activeStyle = {styles.activelink} to="/" exact>Home</NavLink>
         <NavLink style = {styles.link} activeStyle = {styles.activelink} to='/recipes'> Recipes</NavLink>
         <NavLink style = {styles.link} activeStyle = {styles.activelink} to='/contact'> Contact</NavLink>
         <NavLink style = {styles.link} activeStyle = {styles.activelink} to='/testing'> Testing</NavLink>
       </nav>
-      <br />
     </>
   )
 }
@@ -31,10 +27,5 @@ const styles = {
   activelink: {
     color: 'white',
     background: 'black'
-  },
-  navbar: {
-    background: 'green'
   }
 }
-
-export default PageNavigation;

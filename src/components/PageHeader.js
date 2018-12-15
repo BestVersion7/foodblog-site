@@ -1,7 +1,7 @@
 import React from 'react';
 import Logo from '../assets/headerbackground.jpg';
 
-const PageHeader = () => {
+export default () => {
 	return (
 		<div style = {styles.container}>
 			<button style={styles.headerTitle}> Gourmet Meals </button>
@@ -21,8 +21,7 @@ const styles = {
 	container: {
 		background: `url(${Logo})`,
 		height: '3em',
-		opacity: '0.8'
+		opacity: '0.8',
+		position: 'sticky'
 	}
 }
-
-export default PageHeader;

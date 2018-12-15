@@ -1,4 +1,4 @@
-1
+1 AWAIT PROMISE
 /*import React, { useState, useEffect } from 'react';
 import HookLog from './HookLog';
 
@@ -15,14 +15,12 @@ async function TestHooks() {
 	console.log('3')
 }*/
 
-2
+2 HANDLE INPUT STATE
 /*import React, { useState, useEffect } from 'react';
 
 export const TestHooks = () => {
-
 	const [val,setVal] = useState (0);
   const [name, setName] = useState('Jago');
-
   useEffect( () => {
     document.title = name
   },[val]);
@@ -38,7 +36,7 @@ export const TestHooks = () => {
   }
 
 	return (
-		<div style = {styles.container}>
+		<div>
 			<p> {val} </p>
 			<button onClick = {Increment1}>Increase</button>
 			<button onClick = {Decrement1}>Decrease</button>
@@ -50,11 +48,71 @@ export const TestHooks = () => {
 		</div>
 	)
 }
+export default TestHooks;*/
+
+3 TIMEOUTS AND INTERVALS
+/*function hello() {
+  console.log('yellow')
+}
+setTimeout(() => alert('wowiee'),1000);
+setTimeout(() => console.log('bb'),3000)
+setInterval (hello, 3000)
+*/
+
+4 POLL STATE
+/*const [val3,setVal3] = useState ("");
+
+useEffect(() => {
+});
+
+function handleFoodClick(e) {
+  setVal3("Sweet")
+}
+function handleFoodClick2(e) {
+  setVal3("Salty")
+}
+function handleNameChange(e) {
+  setVal3(e.target.value)
+}
+
+return (
+  <div style = {styles.container}>
+    <p> What type of food are you thinking about? </p>
+    <button onClick = {handleFoodClick}> Sweet </button>
+    <button onClick = {handleFoodClick2}> Salty </button>
+    <input
+      onChange = {handleNameChange}
+    />
+    <br /> <br />
+    <p> I clicked {val3} </p>
+
+    <input type="submit" onClick={handleFoodClick}/>
+  </div>
+  */
+5 API CALLS
+/*
+import React, { useState,useEffect } from 'react';
+
+export default () => {
+	const [user, setUser] = useState (null);
+
+	useEffect(async() => {
+		const response = await fetch('https://api.randomuser.me/');
+		const data = await response.json();
+		const [obj] = data.results;
+		setUser(obj);
+	},[]) //only runs once
+
+	return (
+		<div style = {styles.container}>
+			{user && <div>{user.name.first} {user.name.last}</div>}
+		</div>
+	)
+}
 
 const styles = {
 	container: {
 		margin: '0 2.5%'
 	}
 }
-
-export default TestHooks;*/
+*/

@@ -1,34 +1,29 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState,useEffect } from 'react';
 
-export const TestHooks = () => {
+const useFetch = url => {
+	const [user, setUser] = useState ("");
+	const [loading, setLoading] = useState (true);
 
-	const [val,setVal] = useState (0);
-  const [name, setName] = useState('Jago');
+	//has to be self-invoking asynchronous
+	useEffect(() => {
+		(async function apiCall() {
+		const response = await fetch(url);
+		const user = await response.json();
+		//deconstruct function
+		const [obj] = user.results;
+		setUser(obj);
+		setLoading(false);
+		})();
+	},[]);
+	return {user, loading};
+};
 
-  useEffect( () => {
-
-  });
-
-  const Increment1 = () => {
-    setVal(val+1)
-  };
-  const Decrement1 = () => {
-    setVal(val-1)
-  };
-  const handleNameChange = e => {
-    setName(e.target.value)
-  }
-
+export default () => {
+	const {user, loading} = useFetch('https://api.randomuser.me/');
 	return (
 		<div style = {styles.container}>
-			<p> {name} </p>
-			<button onClick = {Increment1}>Increase</button>
-			<button onClick = {Decrement1}>Decrease</button>
-      <br /> <br />
-      <input
-        value = {name}
-        onChange = {handleNameChange}
-      />
+			{loading ? <div>...loading</div> : <div>hello {user.name.first} {user.name.last}</div>}
+			{loading ? <div>...loading</div> : <div>hello {user.name.first} {user.name.last}</div>}
 		</div>
 	)
 }
@@ -38,5 +33,3 @@ const styles = {
 		margin: '0 2.5%'
 	}
 }
-
-export default TestHooks;

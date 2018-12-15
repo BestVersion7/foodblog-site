@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ContactForm = () => {
+export default () => {
 	return (
 		<div>
 		    <div style = {styles.container}>
@@ -28,5 +28,3 @@ const styles = {
 		height: '10em'
 	}
 }
-
-export default ContactForm;

@@ -1,18 +1,14 @@
 import React from 'react';
+import '../styles/layout.css';
 
 import PageNavigation from '../components/PageNavigation';
-import PageFooter from '../components/PageFooter';
 import ContactForm from '../components/ContactForm';
 
-
-const ContactPage = () => {
+export default() => {
   return (
-    <div>
+    <div className="yes">
       <PageNavigation />
-      <ContactForm />
-      <PageFooter />
+      <main><ContactForm /></main>
     </div>
   )
 }
-
-export default  ContactPage;

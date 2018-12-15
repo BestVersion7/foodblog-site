@@ -1,15 +1,12 @@
 import React from 'react';
-import PageNavigation from '../components/PageNavigation';
 import TestHooks from '../components/TestHooks';
+import PageNavigation from '../components/PageNavigation';
 
-
-const TestingPage = () => {
+export default() => {
   return (
-    <div>
+    <>
       <PageNavigation />
       <TestHooks />
-    </div>
+    </>
   )
 }
-
-export default TestingPage;

@@ -1,17 +1,13 @@
 import React from 'react';
 
-import PageNavigation from '../components/PageNavigation';
 import RecipeInstructions from '../components/RecipeInstructions';
-import PageFooter from '../components/PageFooter';
+import PageNavigation from '../components/PageNavigation';
 
-const RecipePage = () => {
+export default() => {
   return (
     <div>
       <PageNavigation />
       <RecipeInstructions />
-      <PageFooter />
     </div>
   )
 }
-
-export default RecipePage;
