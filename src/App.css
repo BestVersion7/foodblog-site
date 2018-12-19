@@ -1,0 +1,30 @@
+nav {
+  background: green;
+}
+
+header {
+}
+
+@media (min-width:40em) {
+  .yes {
+    /*display: grid;
+    grid-template-areas:
+      "nav nav nav"
+      "main main main";*/
+  }
+
+  header {
+    grid-area: head;
+  }
+
+  nav {
+  }
+
+  main {
+
+  }
+
+  footer {
+    grid-area: foot;
+  }
+}

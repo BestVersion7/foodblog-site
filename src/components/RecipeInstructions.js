@@ -18,8 +18,8 @@ const RecipeInstructions = () => {
     "nutmeg"
   ];
 
-  const ingredientlist = ingredients.map((x,i)=>
-    <li key={i}>{x}</li>
+  const ingredientlist = ingredients.map((item,i)=>
+    <li style={{'margin':0}} key={i}>{item}</li>
   );
 
   const instruction = [
@@ -36,41 +36,39 @@ const RecipeInstructions = () => {
   );
 
   return (
-    <div style = {styles.container}>
+    <>
       <h2> Gourmet Apple Pie </h2>
       <img className="rounded img-fluid" width="300" src={images.applepie} alt="random pic" />
       <p> Time: 5hr <br /> Servings: 5-10 people </p>
-      <div style = {styles.instructioncontainer}>
+
+      <div style = {styles.container}>
         <div style = {styles.border}>
-    			<h3> Ingredients </h3>
-          <ul>{ingredientlist}</ul>
+    			<h5> Ingredients </h5>
+          {ingredientlist}
     		</div>
         <div style = {styles.border}>
-    			<h3> Instructions </h3>
-          <ol style={styles.paragraph}>{instructionlist}</ol>
+    			<h5> Instructions </h5>
+          <ol style={styles.paragraph}> {instructionlist} </ol>
         </div>
       </div>
 			<br />
-    </div>
+    </>
   )
 }
 
 const styles = {
   container: {
-    margin: '0 2.5%'
-  },
-
-  instructioncontainer: {
     display:'grid',
-    gridTemplate: 'auto/ auto auto 1fr',
+    gridTemplate: 'auto/ auto 1fr',
 		gridColumnGap: '1%'
   },
   paragraph: {
-    fontSize: '1.5em',
-    color: 'red',
+    color: 'blue',
+		paddingLeft: '1em'
   },
 	border: {
-		border: '.2em solid gray'
+		border: 'solid gray',
+		padding: '.5em'
 	}
 }
 

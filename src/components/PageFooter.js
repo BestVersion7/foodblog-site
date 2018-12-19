@@ -6,7 +6,7 @@ const images = {
 	twitter: require('../assets/twitter.png')
 }
 
-const PageFooter = () => {
+export default() => {
 	return (
 	  <footer className="bg-dark text-light text-center">
 	    <div>
@@ -26,5 +26,3 @@ const PageFooter = () => {
 	  </footer>
 	 );
 }
-
-export default PageFooter;

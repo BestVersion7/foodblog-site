@@ -116,3 +116,54 @@ const styles = {
 	}
 }
 */
+
+6 API OWN VERSION NO return
+/*** user.map(item => item)
+VARIABLE DECLARE
+** user.map(item => {
+  const {first} = item;
+  return {item}
+})
+
+import React, { useState, useEffect } from 'react';
+
+export default () => {
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  const fetchData = async () => {
+    const response = await fetch(`https://randomuser.me/api/?results=40&seed=fullstackio`);
+    const data = await response.json();
+    const obj = data.results;
+    setUser(obj);
+    setLoading(false);
+  }
+  //has to be self-invoking asynchronous
+  useEffect(() => {
+    fetchData()
+  }, [])
+
+  return (
+    <div>
+      {loading ? <p>...loading</p> :
+        <div>
+          {user.map((item,i) => {
+            const {first, last} = item.name;
+            const properFullName = `${capi(first)} ${capi(last)}`;
+            const {thumbnail} = item.picture;
+            return (
+              <div style={styles.container}>
+                <img src={thumbnail} />
+                <div>
+                  <p>{properFullName}</p>
+                  <p> Yummy! </p>
+                </div>
+              </div>
+            )
+          })}
+        </div>
+      }
+    </div>
+  )
+}
+*/

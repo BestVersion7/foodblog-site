@@ -1,13 +1,19 @@
 import React from 'react';
 
 import RecipeInstructions from '../components/RecipeInstructions';
-import PageNavigation from '../components/PageNavigation';
+import CustomerReviews from '../components/CustomerReviews';
 
 export default() => {
   return (
-    <div>
-      <PageNavigation />
+    <div style={styles.container}>
       <RecipeInstructions />
+      <CustomerReviews />
     </div>
   )
+}
+
+const styles ={
+  container: {
+    margin: '2.5%'
+  }
 }
