@@ -31,7 +31,7 @@ const styles = {
 		display:'grid',
 		gridTemplate: '15em/auto auto auto auto 1fr',
     overflow: 'auto',
-		gridColumnGap: '5%'
+		gridColumnGap: '1em'
 	},
 
 	imgbook: {

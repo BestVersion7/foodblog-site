@@ -12,14 +12,14 @@ const RecipeInstructions = () => {
     "sugar",
     "salt",
     "eggs",
-    "lemon juice",
+    "lemon",
     "butter",
     "cinnamon",
     "nutmeg"
   ];
 
   const ingredientlist = ingredients.map((item,i)=>
-    <li style={{'margin':0}} key={i}>{item}</li>
+    <p key={i}> -{item}</p>
   );
 
   const instruction = [
@@ -44,14 +44,18 @@ const RecipeInstructions = () => {
       <div style = {styles.container}>
         <div style = {styles.border}>
     			<h5> Ingredients </h5>
-          {ingredientlist}
+						<div className = "ingredientcontainer">
+        			{ingredientlist}
+						</div>
     		</div>
-        <div style = {styles.border}>
-    			<h5> Instructions </h5>
-          <ol style={styles.paragraph}> {instructionlist} </ol>
+				<br />
+				<div style={styles.border}>
+					<h5> Instructions </h5>
+          <ol>{instructionlist}</ol>
         </div>
-      </div>
-			<br />
+
+				<br />
+			</div>
     </>
   )
 }
@@ -59,9 +63,14 @@ const RecipeInstructions = () => {
 const styles = {
   container: {
     display:'grid',
-    gridTemplate: 'auto/ auto 1fr',
+    gridTemplate: 'auto auto/ 1fr',
 		gridColumnGap: '1%'
   },
+	ingredientcontainer: {
+		display: 'grid',
+		gridTemplate: 'auto auto/ repeat(5, auto)',
+		overflow: 'auto'
+	},
   paragraph: {
     color: 'blue',
 		paddingLeft: '1em'

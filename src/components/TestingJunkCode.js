@@ -118,7 +118,7 @@ const styles = {
 */
 
 6 API OWN VERSION NO return
-/*** user.map(item => item)
+/* user.map(item => item)
 VARIABLE DECLARE
 ** user.map(item => {
   const {first} = item;
@@ -165,5 +165,179 @@ export default () => {
       }
     </div>
   )
+}
+*/
+
+UNIVERSAL api
+/*
+import React, { useState,useEffect } from 'react';
+import Slider from 'react-slick';
+
+const useFetch = url => {
+	const [user, setUser] = useState ("");
+	const [loading, setLoading] = useState (true);
+
+	//has to be self-invoking asynchronous
+	useEffect(() => {
+		(async function apiCall() {
+		const response = await fetch(url);
+		const user = await response.json();
+		//deconstruct function
+		const [obj] = user.results;
+		setUser(obj);
+		setLoading(false);
+		})();
+	},[]);
+	return {user, loading};
+};
+
+export default () => {
+	const {user, loading} = useFetch('https://api.randomuser.me/');
+	return (
+		<div style = {styles.container}>
+			{loading ? <div>...loading</div> : <div>hello {user.name.first} {user.name.last}</div>}
+			{loading ? <div>...loading</div> : <div>hello {user.name.first} {user.name.last}</div>}
+		</div>
+	)
+}
+
+const styles = {
+	container: {
+		margin: '0 2.5%'
+	}
+}
+*/
+
+Carousel Hardcoded
+/*
+import React from 'react';
+import Slider from 'react-slick';
+
+import kingcrab from '../assets/kingcrab.jpg';
+import lobster from '../assets/lobster.jpg';
+import mussels from '../assets/mussels.jpg';
+import salmon from '../assets/salmon.jpg';
+import shrimp from '../assets/shrimp.jpg';
+import cheesecake from '../assets/cheesecake.jpg';
+
+const settings = {
+	slidesToShow: 4,
+	slidesToScroll: 4,
+	arrows: false,
+	dots: true,
+	autoplay: false,
+	responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+      }
+    }
+  ]
+}
+
+export default() => {
+	return (
+			<Slider {...settings}>
+				<>
+					<div style={styles.container}>
+						<div style={styles.imgcontainer}> <img src={kingcrab} style={styles.img} alt="king" /> </div>
+						<div style={styles.textcontainer}> <p> es </p> </div>
+					</div>
+				</>
+
+				<>
+					<div style={styles.container}>
+						<div style={styles.imgcontainer}> <img src={lobster} style={styles.img} alt="king" /> </div>
+						<div style={styles.textcontainer}> <p> Lobster <br /> To perfection made from fresh farmed lobster to you door </p> </div>
+					</div>
+				</>
+
+				<>
+					<div style={styles.container}>
+						<div style={styles.imgcontainer}> <img src={mussels} style={styles.img} alt="king" /> </div>
+						<div style={styles.textcontainer}> <p> es </p> </div>
+					</div>
+				</>
+
+				<>
+					<div style={styles.container}>
+						<div style={styles.imgcontainer}> <img src={salmon} style={styles.img} alt="king" /> </div>
+						<div style={styles.textcontainer}> <p> es </p> </div>
+					</div>
+				</>
+
+				<>
+					<div style={styles.container}>
+						<div style={styles.imgcontainer}> <img src={shrimp} style={styles.img} alt="king" /> </div>
+						<div style={styles.textcontainer}> <p> es </p> </div>
+					</div>
+				</>
+
+				<>
+					<div style={styles.container}>
+						<div style={styles.imgcontainer}> <img src={cheesecake} style={styles.img} alt="king" /> </div>
+						<div style={styles.textcontainer}> <p> es </p> </div>
+					</div>
+				</>
+			</Slider>
+	)
+}
+
+const styles = {
+	container: {
+		display: 'grid',
+		gridTemplate: 'auto auto/ 1fr',
+		border: '1px solid blue'
+	},
+	imgcontainer: {
+		gridArea: '1/1/3/2'
+	},
+	img: {
+		width: '100%'
+	},
+  textcontainer: {
+    textAlign: 'center',
+    gridArea: '2/1/3/2',
+    color: 'blue',
+    background: 'rgb(230, 255, 247)',
+    opacity: '.8'
+  }
+}*/
+
+CSS BUILD RESPONSIVE
+/*
+@media (min-width:40em) {
+  .yes {
+    display: grid;
+    grid-area for not row start/ col start/ row end/ col end
+    grid-template-areas:
+      "nav nav nav"
+      "main main main";
+  }
+
+  header {
+    grid-area: head;
+  }
+
+  nav {
+    background: green
+  }
+
+  main {
+  }
+
+  footer {
+    grid-area: foot;
+  }
 }
 */
