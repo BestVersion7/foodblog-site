@@ -341,3 +341,188 @@ CSS BUILD RESPONSIVE
   }
 }
 */
+
+random food slideshhow/*
+import React, { useState, useEffect } from "react";
+
+export default() => {
+  const [meal, setMeal] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  const fetchDrinks = async () => {
+    const response = await fetch('https://www.themealdb.com/api/json/v1/1/latest.php');
+
+    const drinksData = await response.json();
+    const obj = drinksData.meals;
+    setMeal(obj);
+    setLoading(false);
+  }
+
+  useEffect(() => { fetchDrinks() }, [])
+
+  return (
+    <>
+      {loading ? <p>...loading</p> :
+        <>
+          {meal.map((item,i) => {
+            const {strMeal, strMealThumb} = item;
+            return (
+              <div>
+                <img style={{'width':'100%'}} src={strMealThumb} />
+               <p key={i}> {strMeal} </p>
+              </div>
+            )
+          })}
+        </>
+      }
+    </>
+  )
+}*/
+
+Random Text /*
+<p> Learn recipes that will benefit you forever!!! In this website, I have highlighted many recipes that I have perfected from experimenting in the kitchen for over 20+ years! Go ask your loved ones/ family/ friends to help because this is not a one-person job!</p>
+<p><b> Check out Many Recipes below!!!</b> <br /> <i style={{'color':'red'}}><b> links do not work </b></i> </p>
+*/
+
+RECIPE SEARCH BAR FROM API /*
+import React, { useState, useEffect } from "react";
+
+export default () => {
+  const [input, setInput] = useState(null);
+  const [loading, setLoading] = useState("true");
+  const [errorMsg, setErrorMsg] = useState(null);
+  //api call default link to that
+  const apicall = async (x = "abc") => {
+    const apikey = "10d4e3a";
+    const response = await fetch(
+      `https://www.omdbapi.com/?apikey=${apikey}&s=${x}`
+    );
+    const data = await response.json();
+    //deconstruct it here
+    const { Search: items, Response, Error } = data;
+    //api false then loading is true and returns wait
+    if (Response === "True") {
+      setInput(items);
+      setLoading(false);
+    } else {
+      setLoading(true);
+      setErrorMsg(Error);
+    }
+  };
+
+  useEffect(() => {
+    apicall();
+  }, []);
+
+  //change input value to modify api route
+  function handleChange(e) {
+    apicall(e.target.value);
+  }
+
+  return (
+    <>
+      <input onChange={handleChange} placeholder="Search Recipe" />
+
+      <>
+        {loading ?
+          <p> {errorMsg} </p>
+          :
+          <>
+            {input.map((item, i) => {
+              const { Poster, Title, Year } = item;
+              return (
+                <div style={styles.container}>
+                  <div style={styles.textcontainer}><p> {Title} ({Year}) </p></div>
+                  <div style={styles.imagecontainer}><img style={styles.images} src={Poster} /></div>
+                </div>
+              );
+            })}
+          </>
+        }
+      </>
+    </>
+  );
+};
+
+const styles = {
+  container: {
+    display: 'grid',
+    gridTemplate: ' auto auto/ auto',
+    borderBottom: 'solid red',
+  },
+  images: {
+    width: '100%',
+    maxWidth: '25em'
+  }
+}
+*/
+
+RECIPE API
+import React, { useState, useEffect } from "react";
+
+export default () => {
+  const [searchinput, setInput] = useState(null);
+  const [loading, setLoading] = useState("true");
+  //api call default link to that
+  const apicall = async (x = "ba") => {
+    const response = await fetch(
+      `https://www.themealdb.com/api/json/v1/1/search.php?s=${x}`
+    );
+    const data = await response.json();
+    const items = data.meals;
+    if (items !== null) {
+      setInput(items);
+      setLoading(false);
+    } else {
+      setLoading(true);
+    }
+  };
+
+  useEffect(() => {
+    apicall();
+  }, []);
+
+  //change input value to modify api route
+  function handleChange(e) {
+    apicall(e.target.value);
+  }
+
+  return (
+    <>
+      <input onChange={handleChange} placeholder="Search Recipe" />
+      <>
+        {loading ? (
+          <p> Loading... </p>
+        ) : (
+          <>
+            {searchinput.map((item, i) => {
+              const { strMeal, strMealThumb, strSource } = item;
+              return (
+                <div style={styles.container} key={i}>
+                  <p style={styles}> {strMeal} </p>
+                  <img style={styles.img} src={strMealThumb} alt={strMeal} />
+                  <a href={strSource}>Link to meal </a>
+                </div>
+              );
+            })}
+          </>
+        )}
+      </>
+    </>
+  );
+};
+
+const styles = {
+  container: {
+    display: "grid",
+    gridTemplate: " auto auto/ auto",
+    borderBottom: "solid red"
+  },
+  txt: {
+    textAlign: "center"
+  },
+  img: {
+    width: "100%",
+    maxWidth: "25em"
+  }
+};

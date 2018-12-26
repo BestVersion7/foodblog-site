@@ -15,10 +15,8 @@ const images = {
 
 const RecipeImageCards = () => {
 	return (
-	  <div style = {styles.container}>
-			<p> Learn recipes that will benefit you forever!!! In this website, I have highlighted many recipes that I have perfected from experimenting in the kitchen for over 20+ years! Go ask your loved ones/ family/ friends to help because this is not a one-person job!</p>
-			<p><b> Check out Many Recipes below!!!</b> <br /> <i style={{'color':'red'}}><b> links do not work </b></i> </p>
-		  <h2> Starters </h2>
+	  <>
+		  <h4> Starters </h4>
 			<div style ={styles.cardcontainer}>
 				<img style = {styles.img} src={images.shrimp} alt="shrimp" />
 				<img style = {styles.img} src={images.mussels} alt="mussels" />
@@ -35,7 +33,7 @@ const RecipeImageCards = () => {
 				</p>
 			</div>
 
-			<h2> Main Courses </h2>
+			<h4> Main Courses </h4>
 			<div style ={styles.cardcontainer}>
 				<img style = {styles.img} src={images.salmon} alt="salmon" />
 				<img style = {styles.img} src={images.kobebeef} alt="beef" />
@@ -52,7 +50,7 @@ const RecipeImageCards = () => {
 				</p>
 			</div>
 
-			<h2> Desserts </h2>
+			<h4> Desserts </h4>
 			<div style ={styles.cardcontainer}>
 				<img style = {styles.img} src={images.applepie} alt="pie" />
 				<img style = {styles.img} src={images.souffle} alt="souffle" />
@@ -68,16 +66,11 @@ const RecipeImageCards = () => {
         <a href="https://www.google.com"> Click for recipe </a>
 				</p>
 			</div>
-		</div>
-
+		</>
   )
 }
 
 const styles = {
-	container: {
-		margin: '0 2.5%'
-	},
-
 	cardcontainer: {
 		display: 'grid',
 		gridTemplate: '1fr auto/ 1fr 1fr 1fr',

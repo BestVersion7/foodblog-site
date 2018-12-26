@@ -22,6 +22,7 @@ export default () => {
     <>
       {loading ? <p>...loading</p> :
         <>
+          RandomUserAPI <br />
           Comments: <br /><br />
           {user.map((item,i) => {
             const {first, last} = item.name;

@@ -9,8 +9,8 @@ const images = {
 
 const BookImageCards = () => {
 	return (
-	 	<div style={styles.container}>
-		    <h2> Develop Your Cooking Technique!</h2>
+	 	<>
+		    <h4> Develop Your Cooking Technique!</h4>
 		    <div style = {styles.cardcontainer}>
 		       <img style={styles.imgbook} src = {images.bountiful} alt="bountiful" />
 		       <img style={styles.imgbook} src= {images.italian} alt="italian" />
@@ -18,15 +18,11 @@ const BookImageCards = () => {
 		       <img style={styles.imgbook} src = {images.loverealfood} alt="loverealfood"/>
 			  </div>
 				<br />
-		</div>
+		</>
 	)
 }
 
 const styles = {
-	container: {
-		marginLeft: '2.5%'
-	},
-
 	cardcontainer: {
 		display:'grid',
 		gridTemplate: '15em/auto auto auto auto 1fr',

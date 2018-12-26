@@ -37,8 +37,8 @@ const RecipeInstructions = () => {
 
   return (
     <>
-      <h2> Gourmet Apple Pie </h2>
-      <img className="rounded img-fluid" width="300" src={images.applepie} alt="random pic" />
+      <h4> (not from API) Gourmet Apple Pie </h4>
+      <img width="300" src={images.applepie} alt="random pic" />
       <p> Time: 5hr <br /> Servings: 5-10 people </p>
 
       <div style = {styles.container}>
