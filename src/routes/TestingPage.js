@@ -1,10 +1,10 @@
 import React from 'react';
-import TestHooks from '../components/TestHooks';
+import TodoForm from '../components/TodoForm';
 
 export default() => {
   return (
     <>
-      <TestHooks />
+      <TodoForm />
     </>
   )
 }

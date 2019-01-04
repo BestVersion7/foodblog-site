@@ -1,24 +1,38 @@
 
 nav {
   background: green;
-  
 }
 
-.ingredientcontainer {
+.recipe-container {
   display: grid;
-  grid-template: 1fr/ repeat(4, 1fr);
+  grid-template: 1fr/ auto auto;
+  grid-column-gap: 1em;
+  border-bottom: solid red;
+  justify-content: center;
 }
 
-
+.recipe-container-directions {
+  display: none
+}
 
 @media (min-width: 30em) {
   .ingredientcontainer {
     grid-template: 1fr/ repeat(6, 1fr);
   }
+
+  .recipe-container {
+    justify-content: flex-start;
+  }
+
+  .recipe-container-directions {
+    display: unset
+  }
+
 }
 
 @media (min-width: 50em) {
   .ingredientcontainer {
     grid-template: 1fr/ repeat(8, 1fr);
   }
+
 }
