@@ -4,8 +4,6 @@ const RecipeItems = ( {item} ) => {
   const {strMeal, strMealThumb, strInstructions, strSource} = item;
   return (
     <>
-      <div style = {styles.resulttext}> Top 25 Results: </div>
-
       <div className = "recipe-container">
         <div>
           <h4> {strMeal} </h4>
@@ -16,7 +14,7 @@ const RecipeItems = ( {item} ) => {
         <div className="recipe-container-directions">
           <p>
             <b>Directions:</b>
-            <span> + </span>
+            <button> + </button>
             <span> {strInstructions} </span>
           </p>
         </div>
@@ -27,10 +25,6 @@ const RecipeItems = ( {item} ) => {
 }
 
 const styles = {
-  resulttext: {
-    color: 'purple',
-    fontWeight: 'bold'
-  },
   img: {
     maxWidth: "15em"
   },

@@ -1,10 +1,10 @@
 import React from 'react';
-import TestHooks2 from '../components/TestHooks2';
+import Secret from '../components/Secret';
 
 export default() => {
   return (
     <>
-      <TestHooks2 />
+      <Secret />
     </>
   )
 }

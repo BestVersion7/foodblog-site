@@ -10,22 +10,22 @@ import RecipePage from './routes/RecipePage';
 import ContactPage from './routes/ContactPage';
 import ErrorPage from './routes/ErrorPage';
 import TestingPage from './routes/TestingPage';
-import TestingPage2 from './routes/TestingPage2';
+import SecretPath from './routes/SecretPath';
 
 
 const App = () => {
 		return (
 			<>
-				<header><PageHeader /></header>
+				<PageHeader />
 				<Router>
 					<>
-						<nav><PageNavigation /></nav>
+						<PageNavigation />
 							<Switch>
 								<Route path='/' exact component = {HomePage} />
 								<Route path='/recipes' component = {RecipePage} />
 								<Route path='/contact' component = {ContactPage} />
 								<Route path='/testing' component = {TestingPage} />
-								<Route path='/alicia' component = {TestingPage2} />
+								<Route path='/secretpath' component = {SecretPath} />
 								<Route component = {ErrorPage} />
 							</Switch>
 						</>

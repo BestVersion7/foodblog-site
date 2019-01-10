@@ -15,6 +15,7 @@ export default () => {
 		        <input type="text" id="recipe" style = {styles.recipebox}/> <br />
 						<input type="submit" value="Send Message"  />
 		    </div>
+				
 		  <h2 className="bg-info">  To be continued... </h2>
 		</div>
   )

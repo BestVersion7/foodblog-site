@@ -1,32 +1,26 @@
-import React from 'react';
-import {NavLink} from 'react-router-dom';
+import React, {useState} from 'react';
+import iconbar from '../assets/iconbar.png';
+import PageNavigationLinks from './PageNavigationLinks';
 
-export default() => {
+const PageNavigation = () => {
+  const [openNav, setOpenNav] = useState(true)
+  //set State navbar toggle
+  const handleClick = () => {
+    openNav ? setOpenNav(false) : setOpenNav(true)
+  }
+
   return (
-    <>
-      <nav className = "navbar-nav navbar-expand">
-        <NavLink style = {styles.link} activeStyle = {styles.activelink} to="/" exact>Home</NavLink>
-        <NavLink style = {styles.link} activeStyle = {styles.activelink} to='/recipes'> Recipes</NavLink>
-        <NavLink style = {styles.link} activeStyle = {styles.activelink} to='/contact'> Contact</NavLink>
-      {/*  <NavLink style = {styles.link} activeStyle = {styles.activelink} to='/testing'> Testing</NavLink>
-        <NavLink style = {styles.link} activeStyle = {styles.activelink} to='/alicia'> Alicia</NavLink>
-      */}</nav>
-    </>
+    <div>
+      <img
+        className="topnavbar-button"
+        onClick = {handleClick}
+        src={iconbar}
+        width='40'
+      />
+      {/*have this rather than empty div because once toggled on and off in mobile, web navbar will not show*/}
+      {openNav ? <div className="topnavbar-hidden"><PageNavigationLinks /></div>: <PageNavigationLinks />}
+    </div >
   )
 }
 
-const styles = {
-  green: {
-    background: 'green'
-  },
-  link: {
-    color: 'white',
-    fontSize: '1.2em',
-    textDecoration: 'none',
-    padding: '0 1em'
-  },
-  activelink: {
-    color: 'white',
-    background: 'black'
-  }
-}
+export default PageNavigation

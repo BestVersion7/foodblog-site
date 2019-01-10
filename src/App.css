@@ -1,6 +1,35 @@
-
-nav {
+/*TopNavbar Responsive*/
+.topnavbar-container {
+  position: fixed;
+  right: 0;
+  top:0;
+  width: 15em;
   background: green;
+  z-index: 2;
+  height: 100%;
+}
+.topnavbar-link {
+  display: block
+}
+.topnavbar-hidden {
+  display: none
+}
+.topnavbar-button {
+  position: fixed;
+  top: .4em;
+  right: .3em;
+  z-index: 3;
+  cursor: pointer;
+}
+.topnavbar-blankspace {
+  margin-top: 3em
+}
+
+/**/
+.fixed-header {
+  position:fixed;
+  width: 100%;
+  z-index: 2
 }
 
 .recipe-container {
@@ -25,7 +54,26 @@ nav {
   }
 
   .recipe-container-directions {
-    display: unset
+    display: block
+  }
+
+  /*TopNavbar Responsive*/
+  .topnavbar-container {
+    position: static;
+    width: 100%;
+  }
+  .topnavbar-link {
+    display: inline;
+    padding: 0 1em;
+  }
+  .topnavbar-button {
+    display: none
+  }
+  .topnavbar-hidden {
+    display: block
+  }
+  .topnavbar-blankspace {
+    display: none
   }
 
 }
@@ -34,5 +82,4 @@ nav {
   .ingredientcontainer {
     grid-template: 1fr/ repeat(8, 1fr);
   }
-
 }

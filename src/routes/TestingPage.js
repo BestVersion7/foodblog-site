@@ -1,10 +1,8 @@
 import React from 'react';
-import TodoForm from '../components/TodoForm';
+import Testing from '../components/Testing';
 
-export default() => {
+export default () => {
   return (
-    <>
-      <TodoForm />
-    </>
+    <Testing />
   )
 }

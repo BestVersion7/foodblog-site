@@ -35,6 +35,7 @@ const RecipeForm = ( {ChangeOption}) => {
           placeholder = 'Search Here'
         />
       </div>
+      <div style = {styles.resulttext}> Top 25 Results: </div>
     </>
   )
 }
@@ -44,7 +45,12 @@ const styles = {
     display: 'grid',
     gridTemplate: 'auto/ repeat(6, auto) 1fr',
     gridGap: '.5em'
-  }
+  },
+  resulttext: {
+    color: 'purple',
+    fontWeight: 'bold'
+  },
+
 }
 
 export default RecipeForm

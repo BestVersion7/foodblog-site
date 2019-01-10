@@ -7,24 +7,34 @@ const handleRefresh = () => {
 
 export default () => {
 	return (
-		<div style = {styles.container}>
-			<button onClick = {handleRefresh} style={styles.headerTitle}> Gourmet Meals </button>
-		</div>
+		<>
+			<div className="fixed-header" style = {styles.container}>
+				<button onClick = {handleRefresh} style={styles.headerTitle}> Gourmet Meals </button>
+			</div>
+			<div style={{'height':'2.9em'}}> </div>
+		</>
 	)
 }
 
 const styles = {
 	headerTitle: {
-		background: 'none',
 		border: 'none',
 		color: 'black',
 		fontWeight: 'bold',
 		fontSize: '1.5em',
+		background: 'none'
 	},
 
 	container: {
 		background: `url(${Logo})`,
 		height: '3em',
-		opacity: '0.8'
+		borderTop: 'solid black',
+		borderBottom: 'solid black',
+	},
+
+	navbutton: {
+		float: 'right',
+		zIndex: '5',
+		background: 'red'
 	}
 }

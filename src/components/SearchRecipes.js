@@ -12,6 +12,10 @@ export default () => {
     );
     const data = await response.json();
     const items = data.meals;
+
+    /*debugging
+    console.log(items)
+    */
     if (items !== null) {
       setRecipes(items);
       setLoading(false);
