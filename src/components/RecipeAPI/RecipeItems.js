@@ -1,7 +1,14 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 const RecipeItems = ( {item} ) => {
   const {strMeal, strMealThumb, strInstructions, strSource} = item;
+  const [showInstructions, setShowInstructions] = useState(true)
+  const [buttonText, setButtonText] = useState('Expand Recipe')
+  //this toggles
+  const handleClick = () => {
+    showInstructions ? setShowInstructions(false): setShowInstructions(true)
+    buttonText === 'Expand Recipe' ? setButtonText('Shrink Recipe') : setButtonText('Expand Recipe')
+  }
   return (
     <>
       <div className = "recipe-container">
@@ -13,12 +20,16 @@ const RecipeItems = ( {item} ) => {
 
         <div className="recipe-container-directions">
           <p>
-            <b>Directions:</b>
-            <button> + </button>
-            <span> {strInstructions} </span>
+            <b>Directions: </b>
+            <button
+              onClick = {handleClick}
+              className ="recipe-container-button"
+              > {buttonText} </button>
+            {showInstructions ?
+            <span className = "recipe-directions"> {strInstructions} </span>:
+            <span>{strInstructions}</span>}
           </p>
         </div>
-
       </div>
     </>
   )
@@ -26,7 +37,7 @@ const RecipeItems = ( {item} ) => {
 
 const styles = {
   img: {
-    maxWidth: "15em"
+    maxWidth: "15em",
   },
   link: {
     fontWeight: 'bold'

@@ -20,18 +20,22 @@ const RecipeForm = ( {ChangeOption}) => {
         <button
           value = "chicken"
           onClick = {handleInputChange}
+          className = "recipe-input-button"
         >  Chicken </button>
         <button
           value = "beef"
           onClick = {handleInputChange}
+          className = "recipe-input-button"
         > Beef </button>
         <button
           value = "fish"
           onClick = {handleInputChange}
+          className = "recipe-input-button"
         > Fish </button>
         <input
           value = {inputVal}
           onChange = {handleInputChange2}
+          style = {styles.input}
           placeholder = 'Search Here'
         />
       </div>
@@ -41,16 +45,14 @@ const RecipeForm = ( {ChangeOption}) => {
 }
 
 const styles = {
-  container: {
-    display: 'grid',
-    gridTemplate: 'auto/ repeat(6, auto) 1fr',
-    gridGap: '.5em'
-  },
   resulttext: {
     color: 'purple',
     fontWeight: 'bold'
   },
-
+  input: {
+    marginLeft: '.3em',
+    maxWidth: '10em'
+  }
 }
 
 export default RecipeForm

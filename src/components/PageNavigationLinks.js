@@ -37,7 +37,7 @@ const styles = {
     color: 'white',
     textDecoration: 'none',
     textAlign: 'center',
-    fontSize: '1.4em'
+    fontSize: '1.2em'
   },
   activelink: {
     background: 'black'

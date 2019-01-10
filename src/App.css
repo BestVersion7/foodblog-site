@@ -25,23 +25,40 @@
   margin-top: 3em
 }
 
-/**/
+/*Header*/
 .fixed-header {
   position:fixed;
   width: 100%;
   z-index: 2
 }
-
+/*Recipe page expand/min recipe directions*/
 .recipe-container {
   display: grid;
-  grid-template: 1fr/ auto auto;
+  grid-template: 20em/ auto auto;
+  overflow-y: auto;
+  overflow-x: hidden;
   grid-column-gap: 1em;
   border-bottom: solid red;
   justify-content: center;
 }
-
 .recipe-container-directions {
   display: none
+}
+.recipe-container-button {
+  background: green;
+  color: yellow;
+  border: none
+}
+
+/*Recipe Input Button*/
+.recipe-input-button {
+  background: brown;
+  border: none;
+  color: white;
+  margin-right: .3em
+}
+.recipe-input-button:focus {
+  background: green
 }
 
 @media (min-width: 30em) {
@@ -49,15 +66,18 @@
     grid-template: 1fr/ repeat(6, 1fr);
   }
 
+/*Recipe page expand/min recipe directions*/
   .recipe-container {
     justify-content: flex-start;
   }
-
   .recipe-container-directions {
     display: block
   }
+  .recipe-directions {
+    display: none
+  }
 
-  /*TopNavbar Responsive*/
+/*TopNavbar Responsive*/
   .topnavbar-container {
     position: static;
     width: 100%;
@@ -75,11 +95,23 @@
   .topnavbar-blankspace {
     display: none
   }
-
 }
 
 @media (min-width: 50em) {
   .ingredientcontainer {
     grid-template: 1fr/ repeat(8, 1fr);
   }
+  .recipe-container {
+    grid-template: auto/ auto auto;
+  }
+/*Recipe page expand/min recipe directions*/
+  .recipe-container-button {
+    display:none
+  }
+  .recipe-directions {
+    display: block
+  }
+
+
+
 }
