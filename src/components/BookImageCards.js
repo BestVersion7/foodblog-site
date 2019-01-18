@@ -24,15 +24,14 @@ const BookImageCards = () => {
 
 const styles = {
 	cardcontainer: {
-		display:'grid',
-		gridTemplate: '15em/auto auto auto auto 1fr',
-    overflow: 'auto',
+		display: 'grid',
+		gridTemplate: '15em/ repeat(10, 1fr)',
+		overflow: 'auto',
 		gridColumnGap: '1em'
 	},
 
 	imgbook: {
-		height: '100%',
-		objectFit:'cover'
+		height: '15em',
 	}
 }
 

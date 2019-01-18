@@ -20,6 +20,7 @@ const App = () => {
 				<Router>
 					<>
 						<PageNavigation />
+						<div style={{'height':'2em'}}></div>
 							<Switch>
 								<Route path='/' exact component = {HomePage} />
 								<Route path='/recipes' component = {RecipePage} />

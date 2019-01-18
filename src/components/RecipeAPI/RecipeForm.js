@@ -8,7 +8,7 @@ const RecipeForm = ( {ChangeOption}) => {
     setInputVal('')
   }
 
-  function handleInputChange2 (e) {
+  function handleSearchChange (e) {
     setInputVal(e.target.value)
     ChangeOption(inputVal);
   }
@@ -32,9 +32,10 @@ const RecipeForm = ( {ChangeOption}) => {
           onClick = {handleInputChange}
           className = "recipe-input-button"
         > Fish </button>
+      {/*form something*/}
         <input
           value = {inputVal}
-          onChange = {handleInputChange2}
+          onChange = {handleSearchChange}
           style = {styles.input}
           placeholder = 'Search Here'
         />

@@ -28,15 +28,6 @@ export default () => {
     apicall();
   }, []);
 
-  /*function handleRecipeDirectionClick () {
-    let directionDisplay = document.querySelector('.recipeInstructions');
-    if (directionDisplay.style.display === 'none') {
-      directionDisplay.style.display = 'unset';
-    } else {
-      directionDisplay.style.display = 'none';
-    }
-  }*/
-
   return (
     <>
       <RecipeForm

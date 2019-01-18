@@ -34,7 +34,7 @@ const styles = {
 
 	navbutton: {
 		float: 'right',
-		zIndex: '5',
+		zIndex: '3',
 		background: 'red'
 	}
 }

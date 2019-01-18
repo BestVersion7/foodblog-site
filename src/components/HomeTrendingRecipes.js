@@ -30,7 +30,7 @@ function SampleNextArrow(props) {
 
 const settings = {
 	slidesToShow: 4,
-	autoplay: true,
+	autoplay: false,
 	centerMode: false,
   slidesToScroll: 1,
 	initialSlide: 5,
@@ -77,7 +77,7 @@ export default() => {
       {loading ? <p>Loading...</p> :
 				<div>
   				<h4> Trending! </h4>
-  				<div style={{'margin': '0 1em 2em 1em'}}>
+  				<div style={{'margin': '0 1em'}}>
   	        <Slider {...settings}>
   	          {meal.map((item,i) => {
   	            const {strMeal, strMealThumb} = item;
@@ -120,8 +120,8 @@ const styles = {
   textcontainer: {
     textAlign: 'center',
     gridArea: '2/1/3/2',
-    color: 'blue',
-    background: 'rgb(155, 222, 222)',
+    color: 'white',
+    background: 'rgb(165, 4, 93)',
     opacity: '.9',
 		borderLeft: 'solid blue',
 		borderRight: 'solid blue',

@@ -6,7 +6,7 @@ const PageNavigation = () => {
   const [openNav, setOpenNav] = useState(true)
   //set State navbar toggle
   const handleClick = () => {
-    openNav ? setOpenNav(false) : setOpenNav(true)
+    setOpenNav(!openNav)
   }
 
   return (
@@ -16,6 +16,7 @@ const PageNavigation = () => {
         onClick = {handleClick}
         src={iconbar}
         width='40'
+        alt="hamburger"
       />
       {/*have this rather than empty div because once toggled on and off in mobile, web navbar will not show*/}
       {openNav ? <div className="topnavbar-hidden"><PageNavigationLinks /></div>: <PageNavigationLinks />}

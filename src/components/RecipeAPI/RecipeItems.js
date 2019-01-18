@@ -1,12 +1,13 @@
 import React, {useState} from 'react'
 
 const RecipeItems = ( {item} ) => {
+  //deconstruct api here
   const {strMeal, strMealThumb, strInstructions, strSource} = item;
   const [showInstructions, setShowInstructions] = useState(true)
   const [buttonText, setButtonText] = useState('Expand Recipe')
   //this toggles
   const handleClick = () => {
-    showInstructions ? setShowInstructions(false): setShowInstructions(true)
+    setShowInstructions(!showInstructions)
     buttonText === 'Expand Recipe' ? setButtonText('Shrink Recipe') : setButtonText('Expand Recipe')
   }
   return (

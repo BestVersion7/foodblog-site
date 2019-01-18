@@ -27,14 +27,15 @@
 
 /*Header*/
 .fixed-header {
-  position:fixed;
-  width: 100%;
+  position: fixed;
+  width: 90em;
+  margin: auto;
   z-index: 2
 }
 /*Recipe page expand/min recipe directions*/
 .recipe-container {
   display: grid;
-  grid-template: 20em/ auto auto;
+  grid-template: 22em/ auto auto;
   overflow-y: auto;
   overflow-x: hidden;
   grid-column-gap: 1em;
@@ -61,6 +62,16 @@
   background: green
 }
 
+/*Homepage recipe layout cards */
+.homepage-recipe-cards {
+  display: grid;
+  grid-template: auto/ repeat(3, 1fr);
+  grid-column-gap: 1em;
+  text-align: center;
+  overflow: hidden;
+  max-height: 29vw;
+}
+
 @media (min-width: 30em) {
   .ingredientcontainer {
     grid-template: 1fr/ repeat(6, 1fr);
@@ -80,7 +91,7 @@
 /*TopNavbar Responsive*/
   .topnavbar-container {
     position: static;
-    width: 100%;
+    width: 90em;
   }
   .topnavbar-link {
     display: inline;
@@ -90,10 +101,20 @@
     display: none
   }
   .topnavbar-hidden {
-    display: block
+    display: block;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    margin-bottom: 5em
   }
   .topnavbar-blankspace {
     display: none
+  }
+
+  /*Homepage recipe layout cards */
+  .homepage-recipe-cards {
+    grid-template: auto/ repeat(4, 1fr);
+    max-height: 20vw
   }
 }
 
@@ -112,6 +133,8 @@
     display: block
   }
 
-
-
+  /*Homepage recipe layout cards */
+  .homepage-recipe-cards {
+    grid-template: auto/ repeat(5, 1fr);
+  }
 }
