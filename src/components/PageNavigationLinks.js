@@ -1,7 +1,9 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {NavLink} from 'react-router-dom';
 
 export default() => {
+  //Scroll to top of screen on route change
+  useEffect(() => window.scrollTo(0,0))
   return (
     <div>
       <nav className = "topnavbar-container">
@@ -37,7 +39,8 @@ const styles = {
     color: 'white',
     textDecoration: 'none',
     textAlign: 'center',
-    fontSize: '1.2em'
+    fontSize: '1.2em',
+    padding: '.05em 1em'
   },
   activelink: {
     background: 'black'

@@ -9,7 +9,7 @@
   height: 100%;
 }
 .topnavbar-link {
-  display: block
+  display: block;
 }
 .topnavbar-hidden {
   display: none
@@ -31,6 +31,9 @@
   width: 90em;
   margin: auto;
   z-index: 2
+}
+.header-blankspace {
+  height: 1em
 }
 /*Recipe page expand/min recipe directions*/
 .recipe-container {
@@ -70,6 +73,14 @@
   text-align: center;
   overflow: hidden;
   max-height: 29vw;
+}
+
+.testinginput {
+  overflow-y: auto;
+  resize: none;
+  height: 5em;
+  width: 100%;
+  padding: .2em
 }
 
 @media (min-width: 30em) {
@@ -115,6 +126,10 @@
   .homepage-recipe-cards {
     grid-template: auto/ repeat(4, 1fr);
     max-height: 20vw
+  }
+
+  .header-blankspace {
+    height: 2.9em
   }
 }
 

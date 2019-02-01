@@ -30,7 +30,7 @@ function SampleNextArrow(props) {
 
 const settings = {
 	slidesToShow: 4,
-	autoplay: false,
+	autoplay: true,
 	centerMode: false,
   slidesToScroll: 1,
 	initialSlide: 5,
@@ -80,18 +80,20 @@ export default() => {
   				<div style={{'margin': '0 1em'}}>
   	        <Slider {...settings}>
   	          {meal.map((item,i) => {
-  	            const {strMeal, strMealThumb} = item;
+  	            const {strMeal, strMealThumb, strYoutube} = item;
   	            return (
-  								<div key={i}>
-  		              <div style={styles.container}>
-  		                <div style={styles.imgcontainer}>
-  											<img style={styles.img} src={strMealThumb} alt={strMeal} />
-  										</div>
-  										<div style={styles.textcontainer}>
-  									 		<span> {strMeal} </span>
-  										</div>
-  		              </div>
-  								</div>
+    							<div key={i}>
+                    <a href={strYoutube} target="_blank" rel="noopener noreferrer">
+    		              <div style={styles.container}>
+    		                <div style={styles.imgcontainer}>
+    											<img style={styles.img} src={strMealThumb} alt={strMeal} />
+    										</div>
+    										<div style={styles.textcontainer}>
+    									 		<span> {strMeal} </span>
+    										</div>
+    		              </div>
+                    </a>
+    							</div>
   	            )
   	          })}
   	        </Slider>

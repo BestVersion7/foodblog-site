@@ -29,7 +29,7 @@ const RecipeImageCards = () => {
 				))}
 			</div>
 
-			<h3>Main Courses</h3>
+			<h3>Desserts</h3>
 		 	<div className = "homepage-recipe-cards">
 				{desserts.map((item, index) => (
 					<RecipeImageLayout

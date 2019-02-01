@@ -11,7 +11,7 @@ export default () => {
 			<div className="fixed-header" style = {styles.container}>
 				<button onClick = {handleRefresh} style={styles.headerTitle}> Gourmet Meals </button>
 			</div>
-			<div style={{'height':'2.9em'}}> </div>
+			<div className="header-blankspace"> </div>
 		</>
 	)
 }

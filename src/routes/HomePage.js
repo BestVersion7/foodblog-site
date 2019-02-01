@@ -1,7 +1,7 @@
 import React from 'react';
 
 import RecipeImageCards from '../components/RecipeImageCards';
-import BookImageCards from '../components/BookImageCards';
+import BookImageCards from '../components/BookCardsApi/BookImageCards';
 import HomeTrendingRecipes from '../components/HomeTrendingRecipes';
 export default() => {
   return (
@@ -12,3 +12,7 @@ export default() => {
     </div>
   )
 }
+
+/*
+
+*/
