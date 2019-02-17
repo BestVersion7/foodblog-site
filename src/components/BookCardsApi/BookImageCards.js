@@ -1,30 +1,19 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {BookApi} from './BookApi';
 
 const BookImageCards = () => {
 	return (
-	 	<div style={styles.cardcontainer}>
-			{BookApi.map((item,index) => (
-				<div key={index}>
-					<img src={item.image} alt={item.name} />
-				</div>
-			))}
+	 	<div>
+			<h3> Books </h3>
+			<div className="homepage-book-cards">
+				{BookApi.map((item,index) => (
+					<div key={index}>
+						<img className="homepage-book-cards-img" src={item.image} alt={item.name} />
+					</div>
+				))}
+			</div>
 		</div>
 	)
 }
-
-const styles = {
-	cardcontainer: {
-		display: 'grid',
-		gridTemplate: 'auto/ repeat(10, 1fr)',
-		overflow: 'auto',
-		gridColumnGap: '1em'
-	},
-
-	imgbook: {
-		maxHeight: '100%',
-	}
-}
-
 
 export default BookImageCards;

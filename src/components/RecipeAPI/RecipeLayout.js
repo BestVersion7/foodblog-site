@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-const RecipeItems = ( {item} ) => {
+const RecipeLayout = ( {item} ) => {
   //deconstruct api here
   const {strMeal, strMealThumb, strInstructions, strSource} = item;
   const [showInstructions, setShowInstructions] = useState(true)
@@ -45,4 +45,4 @@ const styles = {
   }
 };
 
-export default RecipeItems
+export default RecipeLayout

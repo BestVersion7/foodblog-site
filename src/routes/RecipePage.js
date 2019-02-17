@@ -2,7 +2,7 @@ import React from 'react';
 
 //import RecipeInstructions from '../components/RecipeInstructions';
 import CustomerReviews from '../components/Recipe-reviews/CustomerReviews';
-import SearchRecipes from '../components/SearchRecipes';
+import SearchRecipes from '../components/RecipeAPI/SearchRecipes';
 
 export default() => {
   return (

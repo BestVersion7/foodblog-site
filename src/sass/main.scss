@@ -1,0 +1,14 @@
+@import 'layout/header';
+@import 'layout/navbar';
+@import 'layout/grid';
+@import 'components/buttons';
+@import 'components/images';
+@import 'components/videos';
+
+.testinginput {
+  overflow-y: auto;
+  resize: none;
+  height: 5em;
+  width: 100%;
+  padding: .2em
+}

@@ -1,0 +1,20 @@
+@import 'helpers/mediaquery';
+
+.recipe-container-button {
+  background: green;
+  color: yellow;
+  border: none;
+  @include media-query(50em) {
+    display: none
+  }
+}
+
+.recipe-input-button {
+  background: brown;
+  border: none;
+  color: white;
+  margin-right: .3em
+}
+.recipe-input-button:focus {
+  background: green
+}

@@ -11,6 +11,7 @@ import ContactPage from './routes/ContactPage';
 import ErrorPage from './routes/ErrorPage';
 import TestingPage from './routes/TestingPage';
 import SecretPath from './routes/SecretPath';
+import VideoPage from './routes/VideoPage';
 
 
 const App = () => {
@@ -25,6 +26,7 @@ const App = () => {
 								<Route path='/' exact component = {HomePage} />
 								<Route path='/recipes' component = {RecipePage} />
 								<Route path='/contact' component = {ContactPage} />
+								<Route path='/videos' component = {VideoPage} />
 								<Route path='/testing' component = {TestingPage} />
 								<Route path='/secretpath' component = {SecretPath} />
 								<Route component = {ErrorPage} />

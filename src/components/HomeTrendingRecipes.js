@@ -30,7 +30,7 @@ function SampleNextArrow(props) {
 
 const settings = {
 	slidesToShow: 4,
-	autoplay: true,
+	autoplay: false,
 	centerMode: false,
   slidesToScroll: 1,
 	initialSlide: 5,

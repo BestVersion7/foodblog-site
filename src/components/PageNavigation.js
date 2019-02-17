@@ -19,6 +19,7 @@ const PageNavigation = () => {
         alt="hamburger"
       />
       {/*have this rather than empty div because once toggled on and off in mobile, web navbar will not show*/}
+      
       {openNav ? <div className="topnavbar-hidden"><PageNavigationLinks /></div>: <PageNavigationLinks />}
     </div >
   )

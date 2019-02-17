@@ -74,13 +74,25 @@
   overflow: hidden;
   max-height: 29vw;
 }
-
+.homepage-book-cards {
+  display: grid;
+  grid-template: auto/ repeat(15, 1fr);
+  grid-column-gap: 1em;
+  text-align: center;
+  overflow: auto;
+}
+.homepage-book-cards-img {
+  height: 13em
+}
 .testinginput {
   overflow-y: auto;
   resize: none;
   height: 5em;
   width: 100%;
   padding: .2em
+}
+.video-vid1 {
+  max-width: 100%
 }
 
 @media (min-width: 30em) {
@@ -128,6 +140,10 @@
     max-height: 20vw
   }
 
+  .homepage-book-cards-img {
+    height: 40vw
+  }
+
   .header-blankspace {
     height: 2.9em
   }
@@ -151,5 +167,9 @@
   /*Homepage recipe layout cards */
   .homepage-recipe-cards {
     grid-template: auto/ repeat(5, 1fr);
+  }
+
+  .homepage-book-cards-img {
+    height: auto
   }
 }

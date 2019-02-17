@@ -1,0 +1,11 @@
+@import 'helpers/mediaquery';
+
+.homepage-book-cards-img {
+  max-height: 40vw;
+  @include media-query(30em) {
+    max-height: 10em
+  }
+  @include media-query(50em) {
+    max-height: 20em
+  }
+}

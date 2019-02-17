@@ -1,6 +1,6 @@
 import React from 'react';
 
-import RecipeImageCards from '../components/RecipeImageCards';
+import RecipeImageCards from '../components/HomepageRecipeCards/RecipeImageCards';
 import BookImageCards from '../components/BookCardsApi/BookImageCards';
 import HomeTrendingRecipes from '../components/HomeTrendingRecipes';
 export default() => {

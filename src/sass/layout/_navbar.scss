@@ -1,0 +1,48 @@
+@import 'helpers/mediaquery';
+
+.topnavbar-container {
+  position: fixed;
+  right: 0;
+  top:0;
+  width: 15em;
+  background: green;
+  z-index: 2;
+  height: 100%;
+  @include media-query(30em) {
+    position: static;
+    width: 90em;
+  }
+}
+.topnavbar-link {
+  display: block;
+  @include media-query(30em) {
+    display: inline;
+    padding: 0 1em;
+  }
+}
+.topnavbar-hidden {
+  display: none;
+  @include media-query(30em) {
+    display: block;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    margin-bottom: 5em
+  }
+}
+.topnavbar-button {
+  position: fixed;
+  top: .4em;
+  right: .3em;
+  z-index: 3;
+  cursor: pointer;
+  @include media-query(30em) {
+    display: none
+  }
+}
+.topnavbar-blankspace {
+  margin-top: 3em;
+  @include media-query(30em) {
+    display: none
+  }
+}

@@ -1,0 +1,68 @@
+@import 'helpers/mediaquery';
+
+.recipe-container {
+  display: grid;
+  grid-template: 22em/ auto auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+  grid-column-gap: 1em;
+  border-bottom: solid red;
+  justify-content: center;
+  @include media-query(30em) {
+    justify-content: flex-start;
+  }
+  @include media-query(50em) {
+    grid-template: auto/auto auto
+  }
+}
+
+.recipe-container-directions {
+  display: none;
+  @include media-query(30em) {
+    display: block;
+  }
+}
+
+.ingredientcontainer {
+  @include media-query(30em) {
+    display: block;
+    grid-template: 1fr/ repeat(6, 1fr);
+  }
+  @include media-query(30em) {
+    grid-template: 1fr/ repeat(8, 1fr);
+  }
+}
+
+.recipe-directions {
+  display: none;
+  @include media-query(50em) {
+    display: block
+  }
+}
+
+.homepage-recipe-cards {
+  display: grid;
+  grid-template: auto/ repeat(3, 1fr);
+  grid-column-gap: 1em;
+  text-align: center;
+  overflow: hidden;
+  max-height: 29vw;
+  @include media-query(30em) {
+    grid-template: auto/ repeat(4, 1fr);
+    max-height: 20vw
+  }
+  @include media-query(50em) {
+    grid-template: auto/ repeat(5, 1fr);
+  }
+}
+
+.homepage-book-cards {
+  display: grid;
+  grid-template: auto/ repeat(15, 1fr);
+  grid-column-gap: 1em;
+  text-align: center;
+  overflow: auto;
+  @include media-query(30em) {
+    grid-template: auto/ repeat(3, 1fr)
+  }
+}

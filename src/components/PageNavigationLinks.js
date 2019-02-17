@@ -26,6 +26,13 @@ export default() => {
           className="topnavbar-link"
           style = {styles.link}
           activeStyle = {styles.activelink}
+          to='/videos'
+        > Videos</NavLink>
+
+        <NavLink
+          className="topnavbar-link"
+          style = {styles.link}
+          activeStyle = {styles.activelink}
           to='/contact'> Contact</NavLink>
 {   /*     <NavLink className="topnavbar-link" style = {styles.link} activeStyle = {styles.activelink} to='/testing'> Testing</NavLink>
         <NavLink className="topnavbar-link" style = {styles.link} activeStyle = {styles.activelink} to='/secretpath'> Secret </NavLink>
@@ -40,7 +47,7 @@ const styles = {
     textDecoration: 'none',
     textAlign: 'center',
     fontSize: '1.2em',
-    padding: '.05em 1em'
+    padding: '.08em 1em'
   },
   activelink: {
     background: 'black'

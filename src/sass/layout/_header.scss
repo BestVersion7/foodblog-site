@@ -1,0 +1,14 @@
+@import 'helpers/mediaquery';
+
+.fixed-header {
+  width: 90em;
+  margin: auto;
+  z-index: 2;
+  position: fixed;
+}
+.header-blankspace {
+  height: 1em;
+  @include media-query(30em) {
+    height: 2.9em;
+  }
+}

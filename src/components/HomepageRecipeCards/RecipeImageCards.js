@@ -1,6 +1,6 @@
 import React from 'react';
 import RecipeImageLayout from './RecipeImageLayout'
-import {RecipeAPI} from '../utils/RecipeAPI'
+import {RecipeAPI} from './RecipeAPI'
 
 const RecipeImageCards = () => {
 	const starters = RecipeAPI.filter(item => item.type===1)

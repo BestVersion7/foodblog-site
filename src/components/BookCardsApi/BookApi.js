@@ -1,9 +1,5 @@
 export const BookApi = [
   {
-    name: 'bestcookbook',
-    image: require('../../assets/Books/bestcookbook.jpg'),
-  },
-  {
     name: 'bountiful',
     image: require('../../assets/Books/bountiful.jpg'),
   },
@@ -30,5 +26,9 @@ export const BookApi = [
   {
     name: 'loverealfood',
     image: require('../../assets/Books/loverealfood.jpg'),
+  },
+  {
+    name: 'bestcookbook',
+    image: require('../../assets/Books/bestcookbook.jpg'),
   }
 ]

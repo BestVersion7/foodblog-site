@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import RecipeForm from './RecipeAPI/RecipeForm';
-import RecipeItems from './RecipeAPI/RecipeItems';
+import RecipeForm from './RecipeForm';
+import RecipeLayout from './RecipeLayout';
 
 export default () => {
   const [recipes, setRecipes] = useState([]);
@@ -37,7 +37,7 @@ export default () => {
       {loading ?
         <p> Loading... </p> :
         recipes.map((item,index) =>
-        <RecipeItems
+        <RecipeLayout
           item = {item}
           key = {index}
         />
