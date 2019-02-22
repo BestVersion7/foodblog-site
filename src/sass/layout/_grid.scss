@@ -63,6 +63,6 @@
   text-align: center;
   overflow: auto;
   @include media-query(30em) {
-    grid-template: auto/ repeat(3, 1fr)
+  
   }
 }
