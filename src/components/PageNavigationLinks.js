@@ -26,6 +26,13 @@ export default() => {
           className="topnavbar-link"
           style = {styles.link}
           activeStyle = {styles.activelink}
+          to='/projects'
+        > Projects</NavLink>
+
+        <NavLink
+          className="topnavbar-link"
+          style = {styles.link}
+          activeStyle = {styles.activelink}
           to='/videos'
         > Videos</NavLink>
 
