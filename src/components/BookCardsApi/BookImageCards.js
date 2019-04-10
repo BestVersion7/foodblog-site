@@ -4,7 +4,6 @@ import {BookApi} from './BookApi';
 const BookImageCards = () => {
 	return (
 	 	<div>
-			<h3> Books </h3>
 			<div className="homepage-book-cards">
 				{BookApi.map((item,index) => (
 					<div key={index}>

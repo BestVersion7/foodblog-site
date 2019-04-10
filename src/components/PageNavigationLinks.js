@@ -22,12 +22,12 @@ export default() => {
           to='/recipes'
         > Recipes</NavLink>
 
-        <NavLink
+        {/* <NavLink
           className="topnavbar-link"
           style = {styles.link}
           activeStyle = {styles.activelink}
           to='/projects'
-        > Projects</NavLink>
+        > Projects</NavLink> */}
 
         <NavLink
           className="topnavbar-link"

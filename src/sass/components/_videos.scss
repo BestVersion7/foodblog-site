@@ -4,7 +4,7 @@
   max-width: 100%;
   height: 300;
   @include media-query(30em) {
-    
+    height: 111
   }
   @include media-query(50em) {
   }

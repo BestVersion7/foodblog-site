@@ -58,25 +58,16 @@
 
 .homepage-book-cards {
   display: grid;
-  grid-template: auto/ repeat(15, 1fr);
+  grid-template: auto/ repeat(2, 1fr);
   grid-column-gap: 1em;
   text-align: center;
-  overflow: auto;
+  overflow: hidden;
   @include media-query(30em) {
-  
-  }
-}
-
-.image-collection-container {
-  display: grid;
-  grid-template: auto/ repeat(4, auto);
-  justify-items: center;
-  grid-row-gap: 1em;
-  @include media-query(30em) {
-    grid-template: auto/ repeat(6, auto)
-  }
+    grid-template: auto/ repeat(4, 1fr);
+    overflow: hidden;
+  };
   @include media-query(50em) {
-    grid-template: auto/ repeat(8, auto)
+    grid-template: auto/ repeat(8, 1fr);
+    overflow: hidden;
   }
 }
-
