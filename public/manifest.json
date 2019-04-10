@@ -13,7 +13,7 @@
       "type": "image/png"
     }
   ],
-  "start_url": "/?utm_source=a2hs",
+  "start_url": "/portfolio/#/recipes",
   "display": "standalone",
   "theme_color": "red",
   "background_color": "blue"
