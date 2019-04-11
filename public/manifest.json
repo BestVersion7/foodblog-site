@@ -15,6 +15,6 @@
   ],
   "start_url": "/portfolio/#/recipes",
   "display": "standalone",
-  "theme_color": "red",
-  "background_color": "blue"
+  "theme_color": "#58329F",
+  "background_color": "#58B49F"
 }
