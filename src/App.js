@@ -10,7 +10,6 @@ import RecipePage from './routes/RecipePage';
 import ContactPage from './routes/ContactPage';
 import ErrorPage from './routes/ErrorPage';
 import TestingPage from './routes/TestingPage';
-import SecretPath from './routes/SecretPath';
 import VideoPage from './routes/VideoPage';
 import ProjectsPage from './routes/ProjectsPage';
 
@@ -29,7 +28,6 @@ const App = () => {
 								<Route path='/contact' component = {ContactPage} />
 								<Route path='/videos' component = {VideoPage} />
 								<Route path='/testing' component = {TestingPage} />
-								<Route path='/secretpath' component = {SecretPath} />
 								<Route path='/projects' component = {ProjectsPage} />
 								<Route component = {ErrorPage} />
 							</Switch>
