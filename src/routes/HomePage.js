@@ -7,7 +7,6 @@ export default () => {
     return (
         <>
             <div style={{ margin: "0 2.5%" }}>
-                <h4 style={{ background: "yellow" }} />
                 <p>
                     <i>Last update: 23 October 2020</i>
                 </p>
