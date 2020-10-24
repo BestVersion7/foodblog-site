@@ -63,7 +63,7 @@ export default() => {
   const [loading, setLoading] = useState(true);
 
   const fetchDrinks = async () => {
-    const response = await fetch('https://www.themealdb.com/api/json/v1/1/latest.php');
+    const response = await fetch('https://www.themealdb.com/api/json/v1/1/search.php?f=c');
     const data = await response.json();
     const obj = data.meals;
     setMeal(obj);
