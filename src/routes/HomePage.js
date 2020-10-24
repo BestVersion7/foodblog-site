@@ -13,7 +13,13 @@ export default () => {
                 <p>
                     {" "}
                     These are static images (Check my Heroku site for dynamic
-                    images stored on Cloudinary!){" "}
+                    images stored on Cloudinary CDN :{" "}
+                    <a
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        href="http://goldenwine.herokuapp.com"
+                        title="goldenwine"
+                    > goldenwine.herokuapp.com </a>
                 </p>
                 <HomeTrendingRecipes />
                 <RecipeImageCards />
